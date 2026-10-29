@@ -1,0 +1,20 @@
+<svg width="480" height="180" viewBox="0 0 480 180" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>最常用的编程语言</title>
+  <rect x="0.5" y="0.5" width="479" height="179" rx="8" fill="#ffffff" stroke="#e4e2e2"/>
+  <text x="28" y="42" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="17" font-weight="600" fill="#1f2328">最常用的语言</text>
+  <line x1="28" y1="56" x2="452" y2="56" stroke="#e4e2e2"/>
+
+  <circle cx="36" cy="84" r="5" fill="#e34c26"/>
+  <text x="52" y="88" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="13" fill="#1f2328">HTML</text>
+  <text x="452" y="88" text-anchor="end" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="12" fill="#59636e">87.9%</text>
+  <rect x="52" y="98" width="380" height="8" rx="4" fill="#eaeef2"/>
+  <rect x="52" y="98" width="334" height="8" rx="4" fill="#e34c26"/>
+
+  <circle cx="36" cy="126" r="5" fill="#3178c6"/>
+  <text x="52" y="130" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="13" fill="#1f2328">TypeScript</text>
+  <text x="452" y="130" text-anchor="end" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="12" fill="#59636e">11.1%</text>
+  <rect x="52" y="140" width="380" height="8" rx="4" fill="#eaeef2"/>
+  <rect x="52" y="140" width="42" height="8" rx="4" fill="#3178c6"/>
+
+  <text x="52" y="168" font-family="Segoe UI, Ubuntu, Sans-Serif" font-size="12" fill="#59636e">Shell 1.0% · 含鸿蒙项目 ArkTS（TypeScript 超集）与报告页面 HTML</text>
+</svg>
