@@ -1,6 +1,6 @@
 # Hi there, I'm 陈思宇 / daneeller 👋
 
-> 上海杉达学院 **计算机科学与技术卓越班** 在读，关注 **HarmonyOS 应用开发** 与 **开源合规 / 许可证分析**。
+> 上海杉达学院 **计算机科学与技术卓越班** 在读，关注 **HarmonyOS 应用开发** 与 **开源合规 / 许可证分析**。  
 > 习惯把学到的东西做成能真正跑起来的项目。
 
 ## 🚀 About Me
@@ -23,17 +23,17 @@
 
 ## 📦 项目
 
-| 项目 | 说明 |
-|---|---|
-| [课序 · ClassOrder](https://github.com/daneeller/course-order) | 面向鸿蒙 PC 的学期课表工具，自动检测四类排课冲突并给出改课方案 |
+| 项目                                                                                                    | 说明                                                                 |
+| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| [课序 · ClassOrder](https://github.com/daneeller/course-order)                                          | 面向鸿蒙 PC 的学期课表工具，自动检测四类排课冲突并给出改课方案                                  |
 | [Apache Commons CLI 开源许可测试报告](https://github.com/daneeller/f25015220-apache-commons-cli-license-scan) | 用 ScanCode Toolkit 32.5.0 完成 141 个文件的许可证与版权扫描，核对 Apache-2.0 三要素一致性 |
-| [daneeller](https://github.com/daneeller/daneeller) | 个人主页仓库（GitHub Pages）与简介 README |
+| [daneeller](https://github.com/daneeller/daneeller)                                                   | 个人主页仓库（GitHub Pages）与简介 README                                     |
 
 ## 📊 GitHub Stats
 
-![daneeller's GitHub stats](https://github-readme-stats.vercel.app/api?username=daneeller&show_icons=true&theme=default&hide_border=true)
+![daneeller's GitHub stats](https://raw.githubusercontent.com/daneeller/daneeller/master/assets/stats-card.svg)
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=daneeller&layout=compact&hide_border=true)
+![Top Langs](https://raw.githubusercontent.com/daneeller/daneeller/master/assets/langs-card.svg)
 
 ## 🔗 Links
 
