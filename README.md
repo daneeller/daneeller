@@ -16,6 +16,11 @@
 - **框架 / 工具**：HarmonyOS SDK、DevEco Studio、ScanCode Toolkit
 - **其他**：Git / GitHub、SPDX 许可证标识、开源合规审查
 
+## 🏅 认证与证书
+
+- **HarmonyOS 开发者认证**（华为 · 鸿蒙应用开发）
+- **HCIA-AI**（华为认证人工智能工程师 · AI 方向）
+
 ## 📦 项目
 
 | 项目 | 说明 |
