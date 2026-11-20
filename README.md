@@ -1,45 +1,66 @@
-# Hi there, I'm 陈思宇 / daneeller 👋
+# 陈思宇 / daneeller
 
-> 上海杉达学院 **计算机科学与技术卓越班** 在读，关注 **HarmonyOS 应用开发** 与 **开源合规 / 许可证分析**。  
-> 习惯把学到的东西做成能真正跑起来的项目。
+> 先定义问题，再选工具。
 
-## 🚀 About Me
+上海杉达学院计算机科学与技术卓越班在读。
 
-- 🌱 正在学习：ArkTS 与鸿蒙应用架构、开源许可证识别与合规审查流程
-- 🎯 当前方向：鸿蒙生态应用开发 + 开源软件合规实践
-- 🏫 学校：上海杉达学院 · 计算机科学与技术卓越班（f250117 班），学号 f25015220
-- 📫 联系：通过 GitHub Issues 或 <https://daneeller.github.io> 找到我
+我不太习惯先给自己贴标签再说自己会什么。更愿意先讲清楚一件事到底要解决什么、
+约束在哪里，然后才谈用什么工具——很多时候结论和"通常怎么做"并不一样。
+做过的东西不算多，但尽量让每一件都能复跑、能验证、能被别人接着往下做。
 
-## 🛠️ Tech Stack
+## 我怎么做事
 
-- **语言**：TypeScript / ArkTS、JavaScript、HTML / CSS
-- **框架 / 工具**：HarmonyOS SDK、DevEco Studio、ScanCode Toolkit
-- **其他**：Git / GitHub、SPDX 许可证标识、开源合规审查
+几条我自己反复验证过的原则，比技能清单更能说明我会交付什么：
 
-## 🏅 认证与证书
+- **先问约束，再谈方案。** 一个问题的答案取决于真正的限制条件，而不是行业惯例。
+  把标签和惯例先放一边，回到约束重新推一遍，经常能推出不一样的结论。
+- **端到端自己走完。** 从界面、数据、推理到打包发布，能自己走通的就不拆给别人。
+  不是为了证明全栈，是因为只有穿过每一层，才知道问题到底卡在哪一层。
+- **用可复跑的门禁代替"感觉差不多"。** 写测试、设基线、做变异冒烟——先确认门禁
+  真的能抓到红，再信它给的绿。稳定性不是靠观察几次，是靠能重复触发。
+- **把踩过的坑变成公共财产。** 遇到框架层面的问题，先分清是我的用法错了还是框架
+  真的有缺陷；确认是后者，就做成最小复现报上去，能修就修。
 
-- **HarmonyOS 开发者认证**（华为 · 鸿蒙应用开发）
-- **HCIA-AI**（华为认证人工智能工程师 · AI 方向）
+## 公开记录
 
-## 📦 项目
+下面这些都能点开核对，不是自我评价。
 
-| 项目                                                                                                    | 说明                                                                 |
-| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| [课序 · ClassOrder](https://github.com/daneeller/course-order)                                          | 面向鸿蒙 PC 的学期课表工具，自动检测四类排课冲突并给出改课方案                                  |
-| [Apache Commons CLI 开源许可测试报告](https://github.com/daneeller/f25015220-apache-commons-cli-license-scan) | 用 ScanCode Toolkit 32.5.0 完成 141 个文件的许可证与版权扫描，核对 Apache-2.0 三要素一致性 |
-| [daneeller](https://github.com/daneeller/daneeller)                                                   | 个人主页仓库（GitHub Pages）与简介 README                                     |
+### 给 Flet 上游的贡献
 
-## 📊 GitHub Stats
+- [PR #7101](https://github.com/flet-dev/flet/pull/7101) **已合并**——补了官方 async 文档里
+  一直缺的两点：首帧更新要让出事件循环、后台线程异常的归属。维护者重写后合并，
+  CHANGELOG 1.1.x 署名 `@daneeller`。这个 PR 还让维护者发现并修掉了一个真实的框架 bug
+  （[#7106](https://github.com/flet-dev/flet/pull/7106)，带 230 行测试）。
+- [Issue #7109](https://github.com/flet-dev/flet/issues/7109)——用真实异常日志定位到
+  `run_task()` 的错误被记在 `concurrent.futures` logger 而非 `flet` logger，按 `flet` 过滤
+  会完全漏掉。维护者在 1.x 复现后开了修复 PR [#7110](https://github.com/flet-dev/flet/pull/7110)。
+- [Issue #7107](https://github.com/flet-dev/flet/issues/7107)——对照 0.86.5 和 1.x 源码逐行
+  核实，指出 `Page.update()` 的线程安全契约从未被文档化，`run_thread()` 被普遍误读成
+  "回 UI 线程"，实际进的是线程池。
+- [Issue #7108](https://github.com/flet-dev/flet/issues/7108)——1.x 调度器用
+  `asyncio.Event.set()` 跨线程调用不安全，已由社区贡献者认领修复。
 
-![daneeller's GitHub stats](https://raw.githubusercontent.com/daneeller/daneeller/master/assets/stats-card.svg)
+其中有一次是[我自己判断错了](https://github.com/flet-dev/flet/issues/7102)：把日志末尾的
+`Session was garbage collected` 当成崩溃原因。维护者指出那只是窗口关闭的 INFO 症状。
+我用日志证据复核后公开承认误判、修正结论——报告的价值不在于每次都对，在于能被证据纠正。
 
-![Top Langs](https://raw.githubusercontent.com/daneeller/daneeller/master/assets/langs-card.svg)
+## 项目
 
-## 🔗 Links
+| 项目 | 说明 |
+|---|---|
+| [课序 · ClassOrder](https://github.com/daneeller/course-order) | 面向鸿蒙 PC 的学期课表工具。不只是显示课表，还查出四类排课冲突并给可执行的改课方案，把问题发现提前到录入的当下。 |
+| [Apache Commons CLI 开源许可测试报告](https://github.com/daneeller/f25015220-apache-commons-cli-license-scan) | 用 ScanCode Toolkit 32.5.0 扫完 141 个受控文件，核对 Apache-2.0 与 LICENSE / NOTICE / 文件头三要素的一致性，并记录误报与检测盲区。 |
 
-- 🌐 个人主页：<https://daneeller.github.io>
-- 🐙 GitHub：<https://github.com/daneeller>
+## 认证
+
+- HarmonyOS 开发者认证（华为 · 鸿蒙应用开发）
+- HCIA-AI（华为认证人工智能工程师 · AI 方向）
+
+## 联系
+
+- GitHub：<https://github.com/daneeller>
+- 个人主页：<https://daneeller.github.io>
 
 ---
 
-⭐️ 感谢来访，欢迎交流。
+欢迎交流。如果你也觉得"通常这么做"不够有说服力，大概能聊到一块儿去。
