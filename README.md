@@ -51,6 +51,7 @@ All entries below link to the original thread.
 |---|---|
 | [ClassOrder](https://github.com/daneeller/course-order) | A semester timetable tool for HarmonyOS PC. Detects four classes of scheduling conflict and proposes actionable fixes. |
 | [Apache Commons CLI license scan](https://github.com/daneeller/f25015220-apache-commons-cli-license-scan) | Scanned 141 controlled files with ScanCode Toolkit 32.5.0, checking Apache-2.0 against LICENSE / NOTICE / file headers, including false positives and blind spots. |
+| [Handover Defect Collaboration](https://github.com/daneeller/fde-handover-collab) | FDE coursework covering business discovery, solution design and a runnable prototype for handover defect tracking and rectification. |
 
 ## Certifications
 
