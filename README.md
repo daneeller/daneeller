@@ -32,16 +32,18 @@ All entries below link to the original thread.
 
 - [PR #7101](https://github.com/flet-dev/flet/pull/7101) · **Merged** — two gaps in
   the official async docs; also led to a framework fix in
-  [#7106](https://github.com/flet-dev/flet/pull/7106).
+  [#7106](https://github.com/flet-dev/flet/pull/7106). Shipped in Flet 1.1.3.
 - [Issue #7109](https://github.com/flet-dev/flet/issues/7109) →
   [PR #7110](https://github.com/flet-dev/flet/pull/7110) · **Merged** — `run_task()`
   exceptions were logged under `concurrent.futures` rather than `flet`.
-- [Issue #7107](https://github.com/flet-dev/flet/issues/7107) — `Page.update()`
-  thread-safety contract was undocumented; `run_thread()` does not return to the UI
-  thread.
+- [Issue #7107](https://github.com/flet-dev/flet/issues/7107) →
+  [PR #7127](https://github.com/flet-dev/flet/pull/7127) · **Open** — `Page.update()`
+  thread-safety contract was undocumented; docs clarification submitted after the
+  upstream fix landed.
 - [Issue #7108](https://github.com/flet-dev/flet/issues/7108) →
-  [PR #7113](https://github.com/flet-dev/flet/pull/7113) — unsafe cross-thread
-  `asyncio.Event.set()` in the 1.x scheduler.
+  [PR #7113](https://github.com/flet-dev/flet/pull/7113) · **Merged** — unsafe
+  cross-thread `asyncio.Event.set()` in the 1.x scheduler. Independently reproduced;
+  one follow-up commit in the merged PR is co-authored by me. Shipped in Flet 1.1.3.
 - [Issue #7120](https://github.com/flet-dev/flet/issues/7120) — `run_thread()` workers
   could not be cancelled; the process lingered after the window closed.
 
