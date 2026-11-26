@@ -28,6 +28,25 @@ Four principles, stated briefly:
 
 All entries below link to the original thread.
 
+### Contributions to CPython
+
+- [Issue #162414](https://github.com/python/cpython/issues/162414) →
+  [PR #162594](https://github.com/python/cpython/pull/162594) · **Open, ready for
+  review** — added an optional `timeout` to `sqlite3.Connection.backup()` so a
+  persistently locked database no longer retries forever. The retry window starts at
+  the first `SQLITE_BUSY` / `SQLITE_LOCKED` (before the `progress` callback), closes
+  on `SQLITE_OK`, and preserves the underlying SQLite error code on exhaustion. The
+  default `-1.0` keeps the existing unlimited-retry behaviour. Full `test_sqlite3`
+  suite (534 run / 7 skipped / 0 failed) on Windows Release, Debug and free-threaded
+  builds; upstream CI 59/59 checks passing, including ASan, MSan, TSan (also
+  free-threaded) and UBSan.
+- [Issue #161868](https://github.com/python/cpython/issues/161868) — confirmed GIL
+  handoff starvation on Windows with CPython 3.14.5 (main-thread `sleep(0.001)`
+  stalled up to 785 ms) and a real workbook-export trigger path. Later verified the
+  author's [fix PR #161930](https://github.com/python/cpython/pull/161930) on Windows
+  x64: the same reproducer dropped from 531 / 706 / 455 ms (unpatched) to 8 / 8 / 11
+  ms (patched), with the PR's regression test passing. PR remains open.
+
 ### Contributions to Flet
 
 - [PR #7101](https://github.com/flet-dev/flet/pull/7101) · **Merged** — two gaps in
